@@ -29,7 +29,7 @@
   "prepare": "husky install",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint-fix && npm run lint"
     }
   },
   "lint-staged": {
@@ -45,6 +45,7 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts*",
     "lint": "tsc --noEmit && eslint src/**/*.ts*",
+    "lint-fix": "tsc --noEmit && eslint src/**/*.ts* --fix",
     "sb": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
