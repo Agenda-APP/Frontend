@@ -1,12 +1,19 @@
 import styled from "styled-components";
+import { Variant } from "./Button";
 
-export const ButtonStyled = styled.button((props) => ({
-  width: 186,
-  height: 42,
-  background: props.theme.colors.primary,
-  borderRadius: props.theme.borders.m,
-  outline: "inherit",
-  border: 0,
-  cursor: "pointer",
-  color: "white",
-}));
+interface ButtonStyledProps {
+  variant: Variant;
+}
+
+export const ButtonStyled = styled.button<ButtonStyledProps>(
+  ({ variant, theme }) => ({
+    width: 186,
+    height: 42,
+    background: theme.colors[variant],
+    borderRadius: theme.borders.m,
+    outline: "inherit",
+    border: 0,
+    cursor: "pointer",
+    color: "white",
+  })
+);
