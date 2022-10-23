@@ -11,7 +11,6 @@ interface ButtonProps {
   type?: "button" | "submit";
   onClick?: () => void;
   variant?: Variant;
-  icon?: string;
   children?: ReactNode;
 }
 

@@ -18,4 +18,9 @@ export const theme = {
     l: 12,
     round: "100%",
   },
+  border: {
+    none: 0,
+    primary: "2px solid #29A19C",
+    warning: "2px solid #F05454",
+  },
 };
