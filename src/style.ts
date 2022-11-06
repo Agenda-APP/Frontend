@@ -11,6 +11,7 @@ export const theme = {
     primary: "#29A19C",
     secondary: "#222831",
     warning: "#F05454",
+    classic: "white",
   },
   borders: {
     s: 4,
@@ -20,7 +21,7 @@ export const theme = {
   },
   border: {
     none: 0,
-    primary: "2px solid #29A19C",
-    warning: "2px solid #F05454",
+    primaryBorder: "2px solid #29A19C",
+    warningBorder: "2px solid #F05454",
   },
 };

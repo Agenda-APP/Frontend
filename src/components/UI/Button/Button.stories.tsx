@@ -10,15 +10,9 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-export const Template: ComponentStory<typeof Button> = (args) => (
+export const Template: ComponentStory<typeof Button> = (args, IconProps) => (
   <Button {...args}>
-    {" "}
-    <IconPlus
-      width={"18px"}
-      fill={"none"}
-      height={"18px"}
-      stroke={"white"}
-    ></IconPlus>{" "}
+    <IconPlus></IconPlus>
     Button
   </Button>
 );

@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
-import home from "../../icon/home.svg";
-import family from "../../icon/family.svg";
-import briefcase from "../../icon/briefcase.svg";
-import zap from "../../icon/zap.svg";
-import staticIcon from "../../icon/static.svg";
-import trendingUp from "../../icon/trending-up.svg";
-import logIn from "../../icon/log-in.svg";
-import plusIcon from "../../icon/plus-square.svg";
+import home from "../../../../task_book/public/icon/home.svg";
+import family from "../../../../task_book/public/icon/family.svg";
+import briefcase from "../../../../task_book/public/icon/briefcase.svg";
+import zap from "../../../../task_book/public/icon/zap.svg";
+import staticIcon from "../../../../task_book/public/icon/static.svg";
+import trendingUp from "../../../../task_book/public/icon/trending-up.svg";
+import logIn from "../../../../task_book/public/icon/log-in.svg";
+import plusIcon from "../../../../task_book/public/icon/plus-square.svg";
 import "./Menu.css";
 
 export const Menu = () => {

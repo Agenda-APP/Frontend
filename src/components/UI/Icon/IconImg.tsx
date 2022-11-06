@@ -1,22 +1,34 @@
 import React, { Component } from "react";
 import "./style.css";
+import { Variant } from "../Button/Button";
 
-export class IconPlus extends Component {
+interface IconProps {
+  width: string;
+  height: string;
+  stroke: Variant;
+  fill: string;
+}
+
+export class IconPlus extends Component<
+  Record<string, never>,
+  { value: IconProps }
+> {
   static defaultProps = {
-    width: "7",
-    height: "7",
-    stroke: "#d5d5d5",
-    fill: "#000",
+    width: "18px",
+    height: "18px",
+    stroke: Variant,
+    fill: "blue",
   };
 
   render() {
+    const { width, height, fill, stroke } = this.props;
     return (
       <svg
         className="icon-plus"
-        width={this.props.width}
-        height={this.props.height}
-        fill={this.props.fill}
-        stroke={this.props.stroke}
+        width={width}
+        height={height}
+        fill={fill}
+        stroke={stroke}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
       >
