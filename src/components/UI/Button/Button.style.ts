@@ -1,24 +1,20 @@
 import styled from "styled-components";
 import { Variant } from "./Button";
-import { Border } from "./Button";
-import { Title } from "./Button";
 
 interface ButtonStyledProps {
   variant: Variant;
-  border: Border;
-  title: Title;
 }
 
 export const ButtonStyled = styled.button<ButtonStyledProps>(
-  ({ variant, theme, border, title }) => ({
-    width: 182,
+  ({ variant, theme }) => ({
     height: 42,
     background: theme.colors[variant],
     borderRadius: theme.borders.m,
     outline: "inherit",
-    border: theme.border[border],
+    border: "none",
     cursor: "pointer",
-    color: theme.colors[title],
+    color: "white",
     fontWeight: "bold",
+    padding: "5px 20px 8px 20px",
   })
 );

@@ -1,0 +1,35 @@
+.task_item{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #282846;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid rgba(40, 40, 70, 0.1);
+    border-radius: 10px;
+    margin-bottom: 7px;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+.task_item img:nth-of-type(1){
+    transform: translateX(-5px);
+}
+.task_value,
+.task_value:disabled,
+.task_value:active,
+.task_value:focus-visible
+{
+    border: 0;
+    color: #282846;
+    width: 100%;
+}
+.task_value:focus-visible{
+    padding: 5px;
+    color: #282846;
+}
+

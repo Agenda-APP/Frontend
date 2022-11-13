@@ -1,0 +1,24 @@
+main{
+    display: grid;
+    grid-template-columns: minmax(566px, auto) minmax(473px, auto);
+    gap: 25px;
+}
+.done_task li{
+    text-decoration: line-through;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #282846;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid rgba(40, 40, 70, 0.1);
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+.title_time{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    color: #282846;
+}
