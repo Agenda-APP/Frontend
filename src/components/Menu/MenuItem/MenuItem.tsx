@@ -1,19 +1,21 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 
 interface IMenuItem {
   title: string;
-  src: string;
-  toggle: boolean;
+  children: ReactNode;
+  href?: string;
 }
 
-const MenuItem: FC<IMenuItem> = ({ title, src, toggle }) => {
+const MenuItem: FC<IMenuItem> = ({ title, children, href }) => {
   return (
-    <li style={toggle ? { color: "white" } : { color: "black" }}>
-      <a href="">
-        <img src={src} alt={title} />
-        {title}
-      </a>
-    </li>
+    <>
+      <li>
+        <a href={href}>
+          {children}
+          {title}
+        </a>
+      </li>
+    </>
   );
 };
 

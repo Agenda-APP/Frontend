@@ -1,19 +1,23 @@
 
-ul li{
+.menu_list li{
     padding-bottom: 25px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.025em;
-    color: #282846;
+    color: var(--font--color);
     cursor: pointer;
 }
-.menu_list li img,
+.svg,
 #logIn img,
 .btn_add img
 {
     transform: translateY(3px);
     padding-right: 10px;
+    width: 30px;
+}
+.svg[svg] path{
+ stroke: var(--font--color);
 }
 .menu{
     width: 15%;
@@ -22,7 +26,7 @@ ul li{
     flex-direction: column;
     box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
     overflow: inherit;
-    background: white;
+    background: var(--bg--section);
     padding: 15px;
 }
 .title_item{

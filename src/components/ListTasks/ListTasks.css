@@ -1,6 +1,6 @@
 .task_item{
     display: grid;
-    grid-template-columns: 1fr 50px;
+    grid-template-columns: 1fr 40px;
     justify-content: space-between;
     font-weight: 400;
     font-size: 14px;
@@ -9,7 +9,7 @@
     color: #282846;
     cursor: pointer;
     padding: 15px;
-    border: 1px solid rgba(40, 40, 70, 0.1);
+    border: var(--border--item);
     border-radius: 10px;
     margin-bottom: 7px;
     text-align: left;
@@ -25,11 +25,13 @@
 .task_value:focus-visible
 {
     border: 0;
-    color: #282846;
+    color: var(--font--color);
     width: 100%;
+    background: var(--bg--section);
 }
 .task_value:focus-visible{
     padding: 5px;
-    color: #282846;
+    color: var(--font--color);
 }
+
 

@@ -20,12 +20,11 @@ const FlexStyled = styled.div<Props>`
   justify-content: ${(props) => props.justify || "stretch"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
-  background: ${(props) =>
-    props.toggle ? props.background || "#21262f" : "white"};
+  background: ${(props) => props.background};
   width: ${({ width }) => width || "auto"};
   p,
   p span {
-    color: ${(props) => (props.toggle ? "white" : "black")};
+    color: var(--font--color);
   }
 `;
 

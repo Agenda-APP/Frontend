@@ -4,24 +4,16 @@ import "./TasksCount.css";
 interface ITaskCount {
   title: string;
   count: number;
-  toggle: boolean;
 }
 
-const TasksCount: FC<ITaskCount> = ({ title, count, toggle }) => {
+const TasksCount: FC<ITaskCount> = ({ title, count }) => {
   return (
     <>
       <div>
-        <p
-          className="task_title"
-          style={toggle ? { color: "white" } : { color: "black" }}
-        >
-          {title}
-        </p>
+        <p className="task_title">{title}</p>
         <div className="task_border">
           <p id="task_count">{count}</p>
-          <span style={toggle ? { color: "white" } : { color: "black" }}>
-            задач
-          </span>
+          <span>задач</span>
         </div>
       </div>
     </>

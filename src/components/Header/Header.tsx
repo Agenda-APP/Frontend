@@ -6,11 +6,10 @@ import moon from "../../assets/moon.svg";
 import sun from "../../assets/sun.svg";
 
 interface IHeader {
-  onToggle: () => void;
-  toggle: boolean;
+  toggleTheme: () => void;
+  theme: boolean;
 }
-
-const Header: FC<IHeader> = ({ onToggle, toggle }) => {
+const Header: FC<IHeader> = ({ toggleTheme, theme }) => {
   return (
     <Flex
       direction="row"
@@ -18,13 +17,12 @@ const Header: FC<IHeader> = ({ onToggle, toggle }) => {
       justify="space-between"
       width="100%"
       padding="15px 15px"
-      toggle={toggle}
     >
       <Button children="Добавить задачу" />
-      <button className="btn_toggle" onClick={onToggle}>
-        <img src={toggle ? sun : moon} alt="moon" />
+      <button className="btn_toggle">
+        <img onClick={toggleTheme} src={theme ? moon : sun} alt="moon" />
       </button>
-      <UserName toggle={toggle} />
+      <UserName />
     </Flex>
   );
 };

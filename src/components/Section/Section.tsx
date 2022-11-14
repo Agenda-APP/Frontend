@@ -8,14 +8,12 @@ type Props = {
 };
 
 const SectionStyle = styled.section<Props>`
-  background-color: ${(props) =>
-    props.toggle ? props.background || "#2C3440" : "white"};
+  background-color: var(--bg--section);
   box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
   border-radius: 10px;
   padding: 15px;
   box-sizing: content-box;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   h2 {
     font-weight: 600;
     font-size: 18px;
@@ -34,7 +32,7 @@ const SectionStyle = styled.section<Props>`
     display: block;
     width: 6px;
     height: 6px;
-    background: rgba(40, 40, 70, 0.47);
+    background: var(--btn--more);
     border-radius: 3px;
     opacity: 0.7;
   }

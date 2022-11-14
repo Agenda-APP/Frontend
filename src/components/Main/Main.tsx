@@ -4,8 +4,8 @@ import Section from "../Section/Section";
 import TasksCount from "../TasksCount/TasksCount";
 import "./Main.css";
 import ListTask from "../ListTasks/ListTasks";
-import calendar from "../../assets/calendar.svg";
-import clock from "../../assets/clock.svg";
+import { ReactComponent as Calendar } from "../../assets/calendar.svg";
+import { ReactComponent as Clock } from "../../assets/clock.svg";
 
 const mockList = [
   { id: 1, value: "Устранить засор в раковине" },
@@ -13,21 +13,13 @@ const mockList = [
   { id: 3, value: "Убраться" },
   { id: 4, value: "Убраться дома" },
 ];
-interface IMain {
-  toggle: boolean;
-}
-const Main: FC<IMain> = ({ toggle }) => {
+
+const Main: FC = () => {
   return (
-    <main style={toggle ? { background: "#21262f" } : { background: "white" }}>
-      <Flex direction="column" padding="0 15px" toggle={toggle}>
-        <Section toggle={toggle}>
-          <Flex
-            direction="row"
-            justify="space-between"
-            align="center"
-            toggle={toggle}
-            background="#2C3440"
-          >
+    <main>
+      <Flex direction="column" padding="0 15px">
+        <Section>
+          <Flex direction="row" justify="space-between" align="center">
             <h2>Успехи за неделю</h2>
             <div className="btn_more">
               <span></span>
@@ -35,38 +27,14 @@ const Main: FC<IMain> = ({ toggle }) => {
               <span></span>
             </div>
           </Flex>
-          <Flex
-            direction="row"
-            justify="space-between"
-            align="center"
-            toggle={toggle}
-            background="#2C3440"
-          >
-            <TasksCount
-              title="Создано"
-              count={mockList.length + 1}
-              toggle={toggle}
-            />
-            <TasksCount
-              title="Завершено"
-              count={mockList.length + 1}
-              toggle={toggle}
-            />
-            <TasksCount
-              title="Удалено"
-              count={mockList.length + 1}
-              toggle={toggle}
-            />
+          <Flex direction="row" justify="space-between" align="center">
+            <TasksCount title="Создано" count={mockList.length + 1} />
+            <TasksCount title="Завершено" count={mockList.length + 1} />
+            <TasksCount title="Удалено" count={mockList.length + 1} />
           </Flex>
         </Section>
-        <Section toggle={toggle}>
-          <Flex
-            direction="row"
-            justify="space-between"
-            align="center"
-            toggle={toggle}
-            background="#2C3440"
-          >
+        <Section>
+          <Flex direction="row" justify="space-between" align="center">
             <h2>Успехи за неделю</h2>
             <div className="btn_more">
               <span></span>
@@ -75,7 +43,7 @@ const Main: FC<IMain> = ({ toggle }) => {
             </div>
           </Flex>
           <ul>
-            <ListTask mockList={mockList} toggle={toggle} />
+            <ListTask mockList={mockList} />
           </ul>
           <h2>Завершенные задачи</h2>
           <ul className="done_task">
@@ -84,28 +52,23 @@ const Main: FC<IMain> = ({ toggle }) => {
           </ul>
         </Section>
       </Flex>
-      <Flex direction="column" toggle={toggle}>
-        <Section toggle={toggle}>
+      <Flex direction="column">
+        <Section>
           <h2>Такс такс такс</h2>
-          <Flex
-            direction="row"
-            justify="space-between"
-            toggle={toggle}
-            background="#2C3440"
-          >
+          <Flex direction="row" justify="space-between">
             <div>
               <p>На часах у нас</p>
-              <img src={clock} alt="clock" />
+              <Clock />
               <span className="title_time">12:33:40</span>
             </div>
             <div>
               <p>А сегодня у нас</p>
-              <img src={calendar} alt="calendar" />
+              <Calendar />
               <span className="title_time">5 марта 2023</span>
             </div>
           </Flex>
         </Section>
-        <Section toggle={toggle}>
+        <Section>
           <h2>Наблюдение</h2>
           <p>
             Больше всего задач вы <a href="#">создаете</a> в Понедельник
@@ -114,7 +77,7 @@ const Main: FC<IMain> = ({ toggle }) => {
             Больше всего задач вы <a href="#">завершаете</a> во Вторник
           </p>
         </Section>
-        <Section toggle={toggle}>
+        <Section>
           <h2>Факт дня</h2>
           <p>
             Человек, который просыпается в 6 утра, по статистике, закрывает все

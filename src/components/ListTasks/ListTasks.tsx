@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import "./ListTasks.css";
-import edit from "../../assets/edit.svg";
+import { ReactComponent as Edit } from "../../assets/edit.svg";
 import trash from "../../assets/delete.svg";
 import Flex from "../Flex/Flex";
 
@@ -8,10 +8,9 @@ type List = { id: number; value: string };
 
 interface ListItemProps {
   mockList: List[];
-  toggle: boolean;
 }
 
-const ListTask: FC<ListItemProps> = ({ mockList, toggle }) => {
+const ListTask: FC<ListItemProps> = ({ mockList }) => {
   const [list, setList] = useState(mockList);
   const handleDelete = (currentId: number) => {
     const cloneList = [...list];
@@ -19,16 +18,8 @@ const ListTask: FC<ListItemProps> = ({ mockList, toggle }) => {
     setList(tempo);
   };
   const render = list.map(({ id, value }) => (
-    <li
-      className="task_item"
-      key={id}
-      style={
-        toggle
-          ? { border: "1px solid rgba(249, 249, 249, 0.2)" }
-          : { border: "1px solid rgba(40, 40, 70, 0.1)" }
-      }
-    >
-      <Flex toggle={toggle}>
+    <li className="task_item" key={id}>
+      <Flex>
         <input
           type="checkbox"
           id="subscribeNews"
@@ -41,17 +32,12 @@ const ListTask: FC<ListItemProps> = ({ mockList, toggle }) => {
           value={value}
           placeholder={value}
           disabled
-          style={
-            toggle
-              ? { background: "#2C3440", color: "white" }
-              : { background: "white" }
-          }
         />
       </Flex>
-      <div>
-        <img id="edit" src={edit} alt="edit" />
+      <Flex justify="space-between">
+        <Edit />
         <img onClick={() => handleDelete(id)} src={trash} alt="trash" />
-      </div>
+      </Flex>
     </li>
   ));
 

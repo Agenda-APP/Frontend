@@ -1,26 +1,22 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import "../src/global.css";
 import { Menu } from "./components/Menu/Menu";
 import Flex from "./components/Flex/Flex";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
+import { useThemes } from "./hooks/use-themes";
 
 const App: FC = () => {
-  const [toggle, setToggle] = useState(false);
-
-  const onToggle = () => {
-    setToggle(!toggle);
-    console.log(toggle);
+  const { theme, setTheme } = useThemes(true);
+  const toggleTheme = () => {
+    setTheme(!theme);
   };
   return (
-    <div
-      className="wrapper"
-      style={toggle ? { background: "#21262f" } : { background: "white" }}
-    >
-      <Menu toggle={toggle} />
+    <div className="wrapper">
+      <Menu />
       <Flex direction="column" margin="0 60px" width="85%">
-        <Header onToggle={onToggle} toggle={toggle} />
-        <Main toggle={toggle} />
+        <Header toggleTheme={toggleTheme} theme={theme} />
+        <Main />
       </Flex>
     </div>
   );
