@@ -1,0 +1,25 @@
+.toggle_menu{
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    background: var( --bg--color);
+    padding: 20px;
+    box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.23);
+    border-radius: 10px;
+    z-index: 2;
+}
+.toggle_menu a{
+    display: block;
+    color: var(--font--color);
+    padding-bottom: 25px;
+    transition: all 0.2s ease-in-out;
+}
+.toggle_menu a:hover{
+    opacity: 0.6;
+}
+.premium {
+    color: #29A19C;
+}
+.toggle_menu a svg{
+    transform: translate(-2px, 3px);
+}

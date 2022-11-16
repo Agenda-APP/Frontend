@@ -22,6 +22,7 @@ const FlexStyled = styled.div<Props>`
   padding: ${({ padding }) => padding || "0"};
   background: ${(props) => props.background};
   width: ${({ width }) => width || "auto"};
+  position: relative;
   p,
   p span {
     color: var(--font--color);

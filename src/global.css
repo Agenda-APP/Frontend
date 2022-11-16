@@ -4,13 +4,15 @@ html[data-theme="dark"]{
     --bg--section: #2C3440;
     --border--item: 1px solid rgba(249, 249, 249, 0.2);
     --btn--more: rgb(239, 235, 235);
+    --icon--color: #FFFFFF;
 }
 html[data-theme="light"]{
-    --font--color: #282846;;
-    --bg--color: #FFFFFF;;
-    --bg--section: #FFFFFF;;
+    --font--color: #282846;
+    --bg--color: #FFFFFF;
+    --bg--section: #FFFFFF;
     --border--item: 1px solid rgba(40, 40, 70, 0.1);
     --btn--more: rgba(40, 40, 70, 0.47);
+    --icon--color: #282846;
 }
 html,
 body {
@@ -18,6 +20,7 @@ body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
     height: 100%;
+    background: var( --bg--color);
 }
 
 a {
