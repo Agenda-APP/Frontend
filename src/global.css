@@ -1,0 +1,60 @@
+html[data-theme="dark"]{
+    --font--color: #F9F9F9;
+    --bg--color: #21262f;
+    --bg--section: #2C3440;
+    --border--item: 1px solid rgba(249, 249, 249, 0.2);
+    --btn--more: rgb(239, 235, 235);
+    --icon--color: #FFFFFF;
+}
+html[data-theme="light"]{
+    --font--color: #282846;
+    --bg--color: #FFFFFF;
+    --bg--section: #FFFFFF;
+    --border--item: 1px solid rgba(40, 40, 70, 0.1);
+    --btn--more: rgba(40, 40, 70, 0.47);
+    --icon--color: #282846;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    background: var( --bg--color);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+button{
+    border: 0;
+}
+.iconPlus{
+    transform: translate(-8px, 5px);
+}
+.btn_toggle{
+    background: transparent;
+    cursor: pointer;
+}
+.btn_toggle img{
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+.btn_toggle img:hover{
+    transform: scale(1.1);
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    background: var(--bg--color);
+}
+

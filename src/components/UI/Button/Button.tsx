@@ -1,17 +1,18 @@
 import React, { FC, ReactNode } from "react";
 import { ButtonStyled } from "./Button.style";
+import iconPlus from "../../../assets/plusIcon.svg";
 
 export enum Variant {
   transparent = "transparent",
   primary = "primary",
   warning = "warning",
+  classic = "classic",
 }
 
 interface ButtonProps {
   type?: "button" | "submit";
   onClick?: () => void;
   variant?: Variant;
-  icon?: string;
   children?: ReactNode;
 }
 
@@ -23,7 +24,8 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <ButtonStyled onClick={onClick} type={type} variant={variant}>
-      <span>{children}</span>
+      <img className="iconPlus" src={iconPlus} alt="plus" />
+      {children}
     </ButtonStyled>
   );
 };

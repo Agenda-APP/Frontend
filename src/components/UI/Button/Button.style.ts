@@ -7,13 +7,14 @@ interface ButtonStyledProps {
 
 export const ButtonStyled = styled.button<ButtonStyledProps>(
   ({ variant, theme }) => ({
-    width: 186,
     height: 42,
     background: theme.colors[variant],
     borderRadius: theme.borders.m,
     outline: "inherit",
-    border: 0,
+    border: "none",
     cursor: "pointer",
     color: "white",
+    fontWeight: "bold",
+    padding: "5px 20px 8px 20px",
   })
 );
