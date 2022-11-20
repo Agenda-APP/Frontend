@@ -8,10 +8,10 @@ import { ReactComponent as Calendar } from "../../assets/calendar.svg";
 import { ReactComponent as Clock } from "../../assets/clock.svg";
 
 const mockList = [
-  { id: 1, value: "Устранить засор в раковине" },
-  { id: 2, value: "Стирка белого белья" },
-  { id: 3, value: "Убраться" },
-  { id: 4, value: "Убраться дома" },
+  { id: 1, value: "Устранить засор в раковине", isCompleted: false },
+  { id: 2, value: "Стирка белого белья", isCompleted: false },
+  { id: 3, value: "Убраться", isCompleted: false },
+  { id: 4, value: "Убраться дома", isCompleted: false },
 ];
 
 const Main: FC = () => {
@@ -58,12 +58,12 @@ const Main: FC = () => {
           <Flex direction="row" justify="space-between">
             <div>
               <p>На часах у нас</p>
-              <Clock />
+              <Clock className="time_svg" />
               <span className="title_time">12:33:40</span>
             </div>
             <div>
               <p>А сегодня у нас</p>
-              <Calendar />
+              <Calendar className="time_svg" />
               <span className="title_time">5 марта 2023</span>
             </div>
           </Flex>

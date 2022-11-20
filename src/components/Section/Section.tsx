@@ -11,7 +11,7 @@ const SectionStyle = styled.section<Props>`
   background-color: var(--bg--section);
   box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
   border-radius: 10px;
-  padding: 15px;
+  padding: 25px;
   box-sizing: content-box;
   margin-bottom: 35px;
   h2 {

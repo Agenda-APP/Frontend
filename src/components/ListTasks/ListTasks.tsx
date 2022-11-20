@@ -3,8 +3,9 @@ import "./ListTasks.css";
 import { ReactComponent as Edit } from "../../assets/edit.svg";
 import trash from "../../assets/delete.svg";
 import Flex from "../Flex/Flex";
+import { CheckBox } from "../Checkbox/CheckBox";
 
-type List = { id: number; value: string };
+type List = { id: number; value: string; isCompleted: boolean };
 
 interface ListItemProps {
   mockList: List[];
@@ -17,14 +18,21 @@ const ListTask: FC<ListItemProps> = ({ mockList }) => {
     const tempo = cloneList.filter(({ id }) => currentId !== id);
     setList(tempo);
   };
-  const render = list.map(({ id, value }) => (
+  const handleCheck = (currentId: number) => {
+    const copy = [...list];
+    copy.map((item) => {
+      if (item.id === currentId) {
+        item.isCompleted = !item.isCompleted;
+      }
+    });
+    setList(copy);
+  };
+  const render = list.map(({ id, value, isCompleted }) => (
     <li className="task_item" key={id}>
       <Flex>
-        <input
-          type="checkbox"
-          id="subscribeNews"
-          name="subscribe"
-          value="newsletter"
+        <CheckBox
+          isCompleted={isCompleted}
+          handleCheck={() => handleCheck(id)}
         />
         <input
           className="task_value"
@@ -34,7 +42,7 @@ const ListTask: FC<ListItemProps> = ({ mockList }) => {
           disabled
         />
       </Flex>
-      <Flex justify="space-between">
+      <Flex justify="space-between" align="center">
         <Edit />
         <img onClick={() => handleDelete(id)} src={trash} alt="trash" />
       </Flex>
