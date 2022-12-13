@@ -1,0 +1,13 @@
+.active:after{
+    position: absolute;
+    content: "";
+    width: 40px;
+    border-radius: 20px 0 0 20px;
+    height: 25px;
+    right: -20px;
+    top: 25px;
+    background: #29A19C;
+}
+.active{
+    color: #29A19C;
+}

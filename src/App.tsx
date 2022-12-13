@@ -1,11 +1,20 @@
 import React, { FC } from "react";
-import { Button, Variant } from "./components/UI/Button/Button";
+import { Navigation } from "./components/Navigation/NavigationMenu";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App: FC = () => (
   <div>
-    <Button variant={Variant.primary}>кнопка</Button>
-    <Button variant={Variant.transparent}>кнопка</Button>
-    <Button variant={Variant.warning}>кнопка</Button>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigation />} />
+        <Route path="/home" element={<Navigation />} />
+        <Route path="/sport" element={<Navigation />} />
+        <Route path="/work" element={<Navigation />} />
+        <Route path="/family" element={<Navigation />} />
+        <Route path="/static" element={<Navigation />} />
+        <Route path="/compare" element={<Navigation />} />
+      </Routes>
+    </BrowserRouter>
   </div>
 );
 
