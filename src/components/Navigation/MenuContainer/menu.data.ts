@@ -1,25 +1,31 @@
 import { IMenu } from "./menu.interface";
+import home from "../../../assets/iconForMenu/home.svg";
+import briefcase from "../../../assets/iconForMenu/briefcase.svg";
+import zap from "../../../assets/iconForMenu/zap.svg";
+import users from "../../../assets/iconForMenu/users.svg";
+import trendingUp from "../../../assets/iconForMenu/trending-up.svg";
+import staticIcon from "../../../assets/iconForMenu/bar-chart.svg";
 
 export const categoryMenu: IMenu = {
   title: "Категории",
   items: [
     {
-      icon: "MdOutlineHome",
+      icon: home,
       name: "Дом",
       link: "/home",
     },
     {
-      icon: "MdSupervisorAccount",
+      icon: users,
       name: "Семья",
       link: "/family",
     },
     {
-      icon: "MdOutlineCases",
+      icon: briefcase,
       name: "Работа",
       link: "/work",
     },
     {
-      icon: "MdSportsBaseball",
+      icon: zap,
       name: "Спорт",
       link: "/sport",
     },
@@ -30,16 +36,14 @@ export const staticMenu: IMenu = {
   title: "Данные",
   items: [
     {
-      icon: "MdEqualizer",
+      icon: trendingUp,
       name: "Статистика",
-      link: "/static",
+      link: "/statistics",
     },
     {
-      icon: "MdTrendingUp",
+      icon: staticIcon,
       name: "Сравнить",
       link: "/compare",
     },
   ],
 };
-
-export const menus: IMenu[] = [categoryMenu, staticMenu];

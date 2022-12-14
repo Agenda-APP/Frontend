@@ -1,26 +1,21 @@
 import React, { FC } from "react";
-import styled from "styled-components";
-import { theme, Flex } from "../../style";
+import { Flex } from "../../styles/style";
 import logo from "../../assets/logo.svg";
+import { LogoName } from "./logo.style";
 
-const LogoName = styled.span({
-  display: "inline-block",
-  fontWeight: 600,
-  fontSize: 18,
-  lineHeight: "22px",
-  letterSpacing: "0.03em",
-  color: theme.colors.primary,
-  paddingLeft: 7,
-});
+interface ILogo {
+  alt?: string;
+}
 
-const Logo: FC = () => {
+const Logo: FC<ILogo> = ({ alt }) => {
   return (
     <Flex>
-      <img src={logo} alt="logo" />
-      <LogoName>
-        Tasks <br></br> Book
-      </LogoName>
+      <img src={logo} alt={alt} />
+      <LogoName> Tasks Book</LogoName>
     </Flex>
   );
+};
+Logo.defaultProps = {
+  alt: "logo",
 };
 export default Logo;

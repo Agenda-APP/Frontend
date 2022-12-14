@@ -1,15 +1,19 @@
 import React, { FC } from "react";
+
 import styled from "styled-components";
-import Logo from "../Logo/Logo";
+import { theme } from "../../styles/style";
+
 import MenuContainer from "./MenuContainer/MenuContainer";
 import LogOutButton from "../Auth/LogOutButton";
+
+import Logo from "../Logo/Logo";
 
 const NavigationStyle = styled.div`
   max-width: 231px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-shadow: ${theme.boxShadow.global};
   overflow: inherit;
   background: white;
   padding: 20px;

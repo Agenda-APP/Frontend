@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-import { MdLogin } from "react-icons/md";
+import logOut from "../../assets/log-in.svg";
 
-import { Flex, SpanText } from "../../style";
+import { Flex, StyledText } from "../../styles/style";
 
 const LogOutButton: FC = () => {
   return (
     <Flex cursor="pointer">
-      <MdLogin size={20} />
-      <SpanText>Выйти</SpanText>
+      <img src={logOut} alt="logOut" />
+      <StyledText>Выйти</StyledText>
     </Flex>
   );
 };

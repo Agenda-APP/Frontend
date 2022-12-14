@@ -1,28 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-export const Global = createGlobalStyle`
-  * {
-  margin: 0;
-  padding: 0;
-  boxSizing: "border-box";
-    body{
-      height: 100%;
-    }
-    a{
-      text-decoration: none;
-      color: inherit;
-    }
-    ul{
-      list-style-type: none;
-      padding: 0;
-    }
-    button{
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-}
-`;
+export const Global = createGlobalStyle({
+  margin: 0,
+  padding: 0,
+  boxSizing: "border-box",
+});
 
 export const theme = {
   colors: {
@@ -35,6 +17,22 @@ export const theme = {
     m: 8,
     l: 12,
     round: "100%",
+  },
+  fontWeight: {
+    s: 400,
+    m: 600,
+  },
+  fontSize: {
+    s: "12px",
+    m: "14px",
+    l: "16px",
+    title: "18px",
+  },
+  boxShadow: {
+    global: "0px 10px 25px rgba(29, 52, 54, 0.08)",
+  },
+  animation: {
+    main: "all 0.3ms ease",
   },
 };
 interface IFlex {
@@ -49,11 +47,15 @@ export const Flex = styled.div<IFlex>`
   flex-direction: ${(props) => props.direction || "row"};
 `;
 
-export const SpanText = styled.span`
+export const StyledText = styled.span`
   color: ${(props) => props.color || theme.colors.secondary};
   margin-left: 10px;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: ${theme.fontWeight.s};
+  font-size: ${theme.fontSize.l};
   line-height: 22px;
   letter-spacing: 0.025em;
+  transition: ${theme.animation.main};
+  &:hover {
+    opacity: 0.8;
+  }
 `;

@@ -1,7 +1,5 @@
-import { TypeMaterialIconName } from "../../../types/icons.types";
-
 export interface IMenuItem {
-  icon: TypeMaterialIconName;
+  icon: string;
   name: string;
   link: string;
 }

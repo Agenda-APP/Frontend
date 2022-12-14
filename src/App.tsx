@@ -1,6 +1,9 @@
 import React, { FC } from "react";
-import { Navigation } from "./components/Navigation/NavigationMenu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import "./styles/global.css";
+
+import { Navigation } from "./components/Navigation/NavigationMenu";
 
 const App: FC = () => (
   <div>
@@ -11,7 +14,7 @@ const App: FC = () => (
         <Route path="/sport" element={<Navigation />} />
         <Route path="/work" element={<Navigation />} />
         <Route path="/family" element={<Navigation />} />
-        <Route path="/static" element={<Navigation />} />
+        <Route path="/statistics" element={<Navigation />} />
         <Route path="/compare" element={<Navigation />} />
       </Routes>
     </BrowserRouter>

@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { SpanText } from "../../../../style";
-import { IMenuItem } from "../menu.interface";
-import { MaterialIcon } from "../../../UI/Icons/MaterialIcon";
 import { NavLink } from "react-router-dom";
+
+import { StyledText } from "../../../../styles/style";
+import { IMenuItem } from "../menu.interface";
+
 import "./MenuItem.css";
 
 const MenuItemStyle = styled.li`
@@ -17,8 +18,8 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
   return (
     <NavLink to={item.link} style={{ position: "relative" }}>
       <MenuItemStyle>
-        <MaterialIcon icon={item.icon} />
-        <SpanText>{item.name}</SpanText>
+        <img src={item.icon} alt={item.name} />
+        <StyledText>{item.name}</StyledText>
       </MenuItemStyle>
     </NavLink>
   );
