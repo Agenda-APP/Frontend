@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { theme } from "../../styles/style";
 
-export const LogoName = styled.p({
+export const LogoName = styled.p(({ theme }) => ({
   fontWeight: theme.fontWeight.m,
   fontSize: theme.fontSize.title,
   lineHeight: "22px",
@@ -9,4 +8,4 @@ export const LogoName = styled.p({
   color: theme.colors.primary,
   paddingLeft: 7,
   width: "100px",
-});
+}));

@@ -1,16 +1,14 @@
 import React, { FC } from "react";
 import Menu from "./Menu";
-import { categoryMenu, staticMenu } from "./menu.data";
+import { categoryMenu, staticMenu } from "./data";
 import ButtonAddMenuItem from "../../UI/Button/ButtonAddMenuItem";
 
-const MenuContainer: FC = () => {
+export const MenuContainer: FC = () => {
   return (
     <nav>
-      <Menu menu={categoryMenu} />
+      <Menu items={categoryMenu.items} title={categoryMenu.title} />
       <ButtonAddMenuItem />
-      <Menu menu={staticMenu} />
+      <Menu items={staticMenu.items} title={staticMenu.title} />
     </nav>
   );
 };
-
-export default MenuContainer;

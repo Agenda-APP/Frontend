@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import "./styles/global.css";
+import "./styles/global";
 
-import { Navigation } from "./components/Navigation/NavigationMenu";
+import { Navigation } from "./components/Navigation";
 
 const App: FC = () => (
   <div>

@@ -1,24 +1,15 @@
 import React, { FC } from "react";
-import { IMenu } from "./menu.interface";
-import styled from "styled-components";
-import { Flex, theme } from "../../../styles/style";
-import MenuItem from "./MenuItem/MenuItem";
+import { IMenu } from "./types";
+import { Flex } from "../../../styles/style";
+import { TitleMenu } from "../../UI/TitleMenu";
+import { NavMenuItem } from "../../UI/NavMenuItem";
 
-const TitleMenu = styled.h2({
-  fontWeight: theme.fontWeight.m,
-  fontSize: theme.fontSize.title,
-  lineHeight: "22px",
-  letterSpacing: "0.03em",
-  color: theme.colors.primary,
-  marginTop: "55px",
-});
-
-const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
-  const renderMenuItem = items.map((menuItem) => (
-    <MenuItem item={menuItem} key={menuItem.link} />
+const Menu: FC<IMenu> = ({ items, title }) => {
+  const renderMenuItem = items.map((menuItem, index) => (
+    <NavMenuItem menuItem={menuItem} key={index} />
   ));
   return (
-    <Flex align="stretch" direction="column">
+    <Flex align="stretch" direction="column" padding="45px 0 0 0">
       <TitleMenu>{title}</TitleMenu>
       <ul>{renderMenuItem}</ul>
     </Flex>

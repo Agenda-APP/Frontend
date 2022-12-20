@@ -1,22 +1,14 @@
 import React, { FC } from "react";
 import plus from "../../../assets/plus-square.svg";
-import styled from "styled-components";
-import { StyledText, theme } from "../../../styles/style";
-
-const ButtonAdd = styled.button`
-  display: flex;
-  align-items: center;
-  margin-top: 25px;
-  border: none;
-  background: transparent;
-`;
+import { theme, Flex } from "../../../styles/style";
+import { StyledText } from "../NavMenuItem/style";
 
 const ButtonAddMenuItem: FC = () => {
   return (
-    <ButtonAdd>
+    <Flex padding="25px 0 0 0" cursor="pointer">
       <img src={plus} alt="plus" />
       <StyledText color={theme.colors.primary}>Добавить</StyledText>
-    </ButtonAdd>
+    </Flex>
   );
 };
 

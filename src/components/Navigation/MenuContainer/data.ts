@@ -1,4 +1,4 @@
-import { IMenu } from "./menu.interface";
+import { IMenu } from "./types";
 import home from "../../../assets/iconForMenu/home.svg";
 import briefcase from "../../../assets/iconForMenu/briefcase.svg";
 import zap from "../../../assets/iconForMenu/zap.svg";

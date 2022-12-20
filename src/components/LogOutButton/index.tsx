@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import logOut from "../../assets/log-in.svg";
 
-import { Flex, StyledText } from "../../styles/style";
+import { Flex } from "../../styles/style";
+import { StyledText } from "../UI/NavMenuItem/style";
 
-const LogOutButton: FC = () => {
+export const LogOutButton: FC = () => {
   return (
     <Flex cursor="pointer">
       <img src={logOut} alt="logOut" />
@@ -11,4 +12,3 @@ const LogOutButton: FC = () => {
     </Flex>
   );
 };
-export default LogOutButton;
