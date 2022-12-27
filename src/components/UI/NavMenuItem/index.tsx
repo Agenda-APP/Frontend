@@ -1,14 +1,14 @@
 import React, { FC } from "react";
-import { StyledText } from "./style";
+import { StyledText, LinkElem, MenuItemStyle } from "./style";
 import { IMenuItem } from "../../Navigation/MenuContainer/types";
-import { LinkElem, MenuItemStyle } from "./style";
 
-export const NavMenuItem: FC<{ menuItem: IMenuItem }> = ({ menuItem }) => {
+export const NavMenuItem: FC<IMenuItem> = (menuItem) => {
+  const { link, icon, name } = menuItem;
   return (
-    <LinkElem to={menuItem.link}>
+    <LinkElem to={link}>
       <MenuItemStyle>
-        <img src={menuItem.icon} alt={menuItem.name} />
-        <StyledText>{menuItem.name}</StyledText>
+        <img src={icon} alt={name} />
+        <StyledText>{name}</StyledText>
       </MenuItemStyle>
     </LinkElem>
   );

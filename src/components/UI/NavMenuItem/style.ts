@@ -20,7 +20,6 @@ export const LinkElem = styled(NavLink)`
 `;
 export const MenuItemStyle = styled.li`
   padding-top: 25px;
-  cursor: pointer;
   display: flex;
   align-items: center;
 `;
@@ -33,6 +32,7 @@ export const StyledText = styled.span`
   line-height: 22px;
   letter-spacing: 0.025em;
   transition: ${theme.animation.main};
+  cursor: pointer;
   &:hover {
     opacity: 0.8;
   }

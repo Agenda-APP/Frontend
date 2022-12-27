@@ -1,17 +1,19 @@
 import React, { FC } from "react";
 import { IMenu } from "./types";
-import { Flex } from "../../../styles/style";
+import { Flex, Padding } from "../../../styles/style";
 import { TitleMenu } from "../../UI/TitleMenu";
 import { NavMenuItem } from "../../UI/NavMenuItem";
 
 const Menu: FC<IMenu> = ({ items, title }) => {
-  const renderMenuItem = items.map((menuItem, index) => (
-    <NavMenuItem menuItem={menuItem} key={index} />
+  const renderMenuItem = items.map((menuItem) => (
+    <NavMenuItem {...menuItem} key={menuItem.id} />
   ));
   return (
-    <Flex align="stretch" direction="column" padding="45px 0 0 0">
-      <TitleMenu>{title}</TitleMenu>
-      <ul>{renderMenuItem}</ul>
+    <Flex align="stretch" direction="column">
+      <Padding top="45px">
+        <TitleMenu>{title}</TitleMenu>
+        <ul>{renderMenuItem}</ul>
+      </Padding>
     </Flex>
   );
 };

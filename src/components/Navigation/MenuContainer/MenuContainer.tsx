@@ -6,9 +6,9 @@ import ButtonAddMenuItem from "../../UI/Button/ButtonAddMenuItem";
 export const MenuContainer: FC = () => {
   return (
     <nav>
-      <Menu items={categoryMenu.items} title={categoryMenu.title} />
+      <Menu {...categoryMenu} />
       <ButtonAddMenuItem />
-      <Menu items={staticMenu.items} title={staticMenu.title} />
+      <Menu {...staticMenu} />
     </nav>
   );
 };

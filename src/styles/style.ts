@@ -38,7 +38,17 @@ interface IFlex {
 export const Flex = styled.div<IFlex>`
   display: flex;
   align-items: ${(props) => props.align || "center"};
-  cursor: ${(props) => props.cursor || "default"};
   flex-direction: ${(props) => props.direction || "row"};
-  padding: ${(props) => props.padding || "0"};
+`;
+interface IPadding {
+  top?: string;
+  bottom?: string;
+  right?: string;
+  left?: string;
+}
+export const Padding = styled.div<IPadding>`
+  padding-top: ${(props) => props.top || "0"};
+  padding-bottom: ${(props) => props.bottom || "0"};
+  padding-right: ${(props) => props.right || "0"};
+  padding-left: ${(props) => props.left || "0"};
 `;

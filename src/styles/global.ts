@@ -10,6 +10,8 @@ export const Global = createGlobalStyle`
     button
     {
       cursor: pointer;
+      border: none;
+      background: transparent;
     }
     a
     {
