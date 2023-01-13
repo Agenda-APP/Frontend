@@ -1,14 +1,13 @@
 import React, { FC } from "react";
-import Menu from "./Menu";
 import { categoryMenu, staticMenu } from "./data";
-import ButtonAddMenuItem from "../../UI/Button/ButtonAddMenuItem";
+import { ButtonTransparent, MenuSection } from "../../../components";
 
 export const MenuContainer: FC = () => {
   return (
     <nav>
-      <Menu {...categoryMenu} />
-      <ButtonAddMenuItem />
-      <Menu {...staticMenu} />
+      <MenuSection {...categoryMenu} />
+      <ButtonTransparent />
+      <MenuSection {...staticMenu} />
     </nav>
   );
 };

@@ -8,5 +8,5 @@ export const NavigationStyle = styled.div(({ theme }) => ({
   boxShadow: theme.boxShadow.global,
   overflow: "inherit",
   background: "white",
-  padding: "20px",
+  padding: theme.size.m,
 }));

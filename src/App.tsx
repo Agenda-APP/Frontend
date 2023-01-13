@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./styles/global";
 
-import { Navigation } from "./components/Navigation";
+import { Navigation } from "./components";
 
 const App: FC = () => (
   <div>

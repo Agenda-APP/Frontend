@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { theme } from "../../../styles/style";
+import { theme } from "../../../styles";
 
 export const LinkElem = styled(NavLink)`
   &.active {
@@ -19,18 +19,16 @@ export const LinkElem = styled(NavLink)`
   }
 `;
 export const MenuItemStyle = styled.li`
-  padding-top: 25px;
+  padding-top: ${theme.size.m};
   display: flex;
   align-items: center;
 `;
 
 export const StyledText = styled.span`
   color: ${(props) => props.color || theme.colors.secondary};
-  margin-left: 10px;
+  margin-left: ${theme.size.s};
   font-weight: ${theme.fontWeight.s};
   font-size: ${theme.fontSize.l};
-  line-height: 22px;
-  letter-spacing: 0.025em;
   transition: ${theme.animation.main};
   cursor: pointer;
   &:hover {

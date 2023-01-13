@@ -1,8 +1,5 @@
 import React, { FC } from "react";
-
-import { MenuContainer } from "./MenuContainer/MenuContainer";
-import { Logo } from "../Logo";
-import { LogOutButton } from "../LogOutButton";
+import { MenuContainer, Logout, Logo } from "../../components";
 
 import { NavigationStyle } from "./style";
 
@@ -11,7 +8,7 @@ export const Navigation: FC = () => {
     <NavigationStyle>
       <Logo />
       <MenuContainer />
-      <LogOutButton />
+      <Logout />
     </NavigationStyle>
   );
 };
