@@ -1,6 +1,6 @@
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from "styled-components";
-import { theme } from "../src/style";
+import { index } from "../src/styles/theme";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,4 +12,4 @@ export const parameters = {
   },
 }
 
-addDecorator(storyFn => <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>)
+addDecorator(storyFn => <ThemeProvider theme={index}>{storyFn()}</ThemeProvider>)
