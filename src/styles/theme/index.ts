@@ -3,6 +3,7 @@ export const theme = {
     primary: "#29A19C",
     secondary: "#222831",
     warning: "#F05454",
+    dark: "#282846",
   },
   borders: {
     s: 4,
@@ -15,14 +16,17 @@ export const theme = {
     m: 600,
   },
   fontSize: {
-    s: "12px",
-    m: "14px",
-    l: "16px",
-    title: "18px",
+    xs: "12px",
+    s: "14px",
+    m: "16px",
+    l: "18px",
+    xl: "24px",
   },
-  size: {
-    s: "10px",
-    m: "25px",
+  sizes: {
+    xs: "10px",
+    s: "15px",
+    m: "20px",
+    l: "25px",
   },
   boxShadow: {
     global: "0px 10px 25px rgba(29, 52, 54, 0.08)",

@@ -19,14 +19,14 @@ export const LinkElem = styled(NavLink)`
   }
 `;
 export const MenuItemStyle = styled.li`
-  padding-top: ${theme.size.m};
+  padding-top: ${theme.sizes.m};
   display: flex;
   align-items: center;
 `;
 
 export const StyledText = styled.span`
   color: ${(props) => props.color || theme.colors.secondary};
-  margin-left: ${theme.size.s};
+  margin-left: ${theme.sizes.s};
   font-weight: ${theme.fontWeight.s};
   font-size: ${theme.fontSize.l};
   transition: ${theme.animation.main};

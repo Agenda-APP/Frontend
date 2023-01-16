@@ -3,22 +3,24 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./styles/global";
 
-import { Navigation } from "./components";
+import { Layout } from "./components";
 
-const App: FC = () => (
-  <div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigation />} />
-        <Route path="/home" element={<Navigation />} />
-        <Route path="/sport" element={<Navigation />} />
-        <Route path="/work" element={<Navigation />} />
-        <Route path="/family" element={<Navigation />} />
-        <Route path="/statistics" element={<Navigation />} />
-        <Route path="/compare" element={<Navigation />} />
-      </Routes>
-    </BrowserRouter>
-  </div>
-);
+const App: FC = () => {
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/home" element={<Layout />} />
+          <Route path="/sport" element={<Layout />} />
+          <Route path="/work" element={<Layout />} />
+          <Route path="/family" element={<Layout />} />
+          <Route path="/statistics" element={<Layout />} />
+          <Route path="/compare" element={<Layout />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;
