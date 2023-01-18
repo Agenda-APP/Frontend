@@ -1,18 +1,18 @@
 import styled, { css } from "styled-components";
-import { Line } from "../Input";
+import { LineThrough } from "../Input";
 
 interface InputStyleProps {
-  line: Line;
+  lineThrough: LineThrough;
 }
 
 export const InputStyle = styled.input<InputStyleProps>(
-  ({ theme, line }) => css`
+  ({ theme, lineThrough }) => css`
     &:disabled {
       border: 0;
       color: \`${theme.colors.dark}\`;
       width: 100%;
       background: white;
-      text-decoration: ${line};
+      text-decoration: ${lineThrough};
     }
     &:enabled,
     &:focus-visible {

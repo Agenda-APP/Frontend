@@ -1,31 +1,39 @@
 import React, { FC } from "react";
 import { Variant } from "../UI/Title";
-import { Section, Title, ActiveTasks, CompletedTasks } from "../../components";
+import {
+  ActiveTasks,
+  CompletedTasks,
+  Section,
+  Title,
+  EmptyTasks,
+} from "../../components";
 import { useAppSelector } from "../../hooks/redux";
-import { Message } from "./style";
+import { Empty } from "./EmptyTasks";
 
 export const Tasks: FC = () => {
   const tasks = useAppSelector((state) => state.tasksList.tasks);
+
   const filterTasks = tasks.filter((task) => task.isCompleted);
+
+  const renderActiveTasks = tasks.map((task) => (
+    <ActiveTasks task={task} key={task.id} />
+  ));
+
+  const renderFilterTasks = filterTasks.map((task) => (
+    <CompletedTasks task={task} key={task.id} />
+  ));
+
   return (
     <Section>
       <Title children="Активные задачи" variant={Variant.l} />
       <ul>
-        {tasks.length > 0 ? (
-          tasks.map((task) => <ActiveTasks task={task} key={task.id} />)
-        ) : (
-          <Message>Активных задач нет</Message>
-        )}
+        {renderActiveTasks}
+        <EmptyTasks tasks={tasks} title={Empty.active} />
       </ul>
       <Title children="Завершенные задачи" variant={Variant.l} />
       <ul>
-        {filterTasks.length > 0 ? (
-          filterTasks.map((task) => (
-            <CompletedTasks task={task} key={task.id} />
-          ))
-        ) : (
-          <Message>Завершенных задач нет</Message>
-        )}
+        {renderFilterTasks}
+        <EmptyTasks tasks={filterTasks} title={Empty.completed} />
       </ul>
     </Section>
   );

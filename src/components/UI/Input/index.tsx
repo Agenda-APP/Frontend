@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC } from "react";
 import { InputStyle } from "./style";
 
-export enum Line {
+export enum LineThrough {
   through = "line-through",
   none = "none",
 }
@@ -10,14 +10,14 @@ interface ITaskWrapper {
   nameTask: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   disabled: boolean;
-  line?: Line;
+  lineThrough?: LineThrough;
 }
 
 export const Input: FC<ITaskWrapper> = ({
   nameTask,
   onChange,
   disabled,
-  line = Line.none,
+  lineThrough = LineThrough.none,
 }) => {
   return (
     <InputStyle
@@ -25,7 +25,7 @@ export const Input: FC<ITaskWrapper> = ({
       onChange={onChange}
       placeholder="Напишите задачу"
       disabled={disabled}
-      line={line}
+      lineThrough={lineThrough}
     />
   );
 };

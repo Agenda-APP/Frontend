@@ -28,6 +28,10 @@ export const theme = {
     m: "20px",
     l: "25px",
   },
+  width: {
+    navigation: "231px",
+    main: "1069px",
+  },
   boxShadow: {
     global: "0px 10px 25px rgba(29, 52, 54, 0.08)",
   },
