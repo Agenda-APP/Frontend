@@ -25,12 +25,12 @@ export const Tasks: FC = () => {
 
   return (
     <Section>
-      <Title children="Активные задачи" variant={Variant.l} />
+      <Title variant={Variant.l}>Активные задачи</Title>
       <ul>
         {renderActiveTasks}
         <EmptyTasks tasks={tasks} title={Empty.active} />
       </ul>
-      <Title children="Завершенные задачи" variant={Variant.l} />
+      <Title variant={Variant.l}>Завершенные задачи</Title>
       <ul>
         {renderFilterTasks}
         <EmptyTasks tasks={filterTasks} title={Empty.completed} />
