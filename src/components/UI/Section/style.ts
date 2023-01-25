@@ -12,6 +12,7 @@ export const SectionStyle = styled.section<ISectionStyle>(
     boxShadow: theme.boxShadow.global,
     background: "white",
     borderRadius: theme.sizes.s,
-    margin: theme.sizes.s,
+    marginBottom: theme.sizes.m,
+    marginTop: theme.sizes.m,
   })
 );

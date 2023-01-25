@@ -1,17 +1,22 @@
 import React, { FC } from "react";
-import { List } from "../../models/tasks.interface";
-import { CheckBox, Input } from "../../components";
-import { Flex } from "../../styles";
-import { edit, trash } from "../../assets";
+
+import { List } from "../../../models/tasks.interface";
+
+import { CheckBox, Input } from "../../../components";
+
+import { Flex } from "../../../styles";
 import { TaskWrapper } from "./style";
-import { useAppDispatch } from "../../hooks/redux";
+
+import { edit, trash } from "../../../assets";
+
+import { useAppDispatch } from "../../../hooks/redux";
 import {
   getCurrentId,
   onChangeValue,
   toggleDisabled,
   removeTask,
   toggleComplete,
-} from "../../store/tasksSlice";
+} from "../../../store/tasksSlice";
 
 interface ListItemProps {
   task: List;

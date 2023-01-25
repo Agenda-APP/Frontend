@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-import { Variant } from "../UI/Title";
+import { Variant } from "../../UI/Title";
 import {
   ActiveTasks,
   CompletedTasks,
   Section,
   Title,
   EmptyTasks,
-} from "../../components";
-import { useAppSelector } from "../../hooks/redux";
+} from "../../index";
+import { useAppSelector } from "../../../hooks/redux";
 import { Empty } from "./EmptyTasks";
 
 export const Tasks: FC = () => {
