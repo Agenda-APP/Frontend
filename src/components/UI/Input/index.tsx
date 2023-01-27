@@ -11,6 +11,7 @@ interface ITaskWrapper {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   disabled: boolean;
   lineThrough?: LineThrough;
+  placeholder: string;
 }
 
 export const Input: FC<ITaskWrapper> = ({
@@ -18,12 +19,13 @@ export const Input: FC<ITaskWrapper> = ({
   onChange,
   disabled,
   lineThrough = LineThrough.none,
+  placeholder,
 }) => {
   return (
     <InputStyle
       value={nameTask}
       onChange={onChange}
-      placeholder="Напишите задачу"
+      placeholder={placeholder}
       disabled={disabled}
       lineThrough={lineThrough}
     />

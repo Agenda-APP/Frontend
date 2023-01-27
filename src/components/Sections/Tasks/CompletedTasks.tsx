@@ -19,6 +19,7 @@ export const CompletedTasks: FC<ITasksProps> = ({ task }) => {
           nameTask={value}
           disabled={true}
           lineThrough={LineThrough.through}
+          placeholder="Напишите задачу"
         />
       </TaskWrapper>
     </>

@@ -1,5 +1,7 @@
 import React, { FC } from "react";
+
 import { Message } from "./style";
+
 import { List } from "../../../models/tasks.interface";
 
 export enum Empty {

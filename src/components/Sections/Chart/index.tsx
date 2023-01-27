@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
-import { date } from "./date";
+import { dataChart } from "./dataChart";
 
 import { Width } from "../../UI/Section";
 
@@ -12,7 +12,7 @@ export const Chart: FC = () => {
   return (
     <Section width={Width.small}>
       <Title>График успеваемости</Title>
-      <LineChart width={420} height={200} data={date}>
+      <LineChart width={420} height={200} data={dataChart}>
         <CartesianGrid stroke="#f5f5f5" />
         <Line
           type="monotone"

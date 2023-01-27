@@ -1,7 +1,9 @@
 import React, { FC } from "react";
+
 import { Flex } from "../../styles/flex";
-import logOut from "../../assets/log-in.svg";
 import { StyledText } from "../UI/NavMenuItem/style";
+
+import logOut from "../../assets/log-in.svg";
 
 export const Logout: FC = () => (
   <Flex>

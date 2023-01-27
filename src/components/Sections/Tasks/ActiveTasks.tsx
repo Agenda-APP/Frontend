@@ -37,6 +37,7 @@ export const ActiveTasks: FC<ListItemProps> = ({ task }) => {
           nameTask={value}
           disabled={isDisabled}
           onChange={(e) => dispatch(onChangeValue(e.target.value))}
+          placeholder="Напишите задачу"
         />
         <Flex>
           <img

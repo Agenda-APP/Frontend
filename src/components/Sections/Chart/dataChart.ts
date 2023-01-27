@@ -1,4 +1,4 @@
-export const date = [
+export const dataChart = [
   { day: "пн", grow: 2 },
   { day: "вт", grow: 5 },
   { day: "ср", grow: 7 },
