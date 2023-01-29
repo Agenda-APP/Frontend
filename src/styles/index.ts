@@ -2,7 +2,7 @@ import { Padding, PaddingSizes } from "./padding";
 import { Flex, FlexValue } from "./flex";
 import { theme } from "./theme";
 import { Global } from "../styles/global";
-import { Text, FontSize, WeightText } from "../styles/text";
+import { Text, FontSize, WeightText, Colors, Cursor } from "../styles/text";
 
 export {
   Padding,
@@ -14,4 +14,6 @@ export {
   Text,
   FontSize,
   WeightText,
+  Colors,
+  Cursor,
 };

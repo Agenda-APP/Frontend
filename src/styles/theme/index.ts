@@ -6,9 +6,8 @@ export const theme = {
     dark: "#282846",
   },
   borders: {
-    s: 4,
-    m: 8,
-    l: 12,
+    s: "5px",
+    m: "15px",
     round: "100%",
   },
   fontWeight: {
@@ -37,6 +36,6 @@ export const theme = {
     global: "0px 10px 25px rgba(29, 52, 54, 0.08)",
   },
   animation: {
-    main: "all 0.3ms ease",
+    main: "all 300ms ease",
   },
 };

@@ -20,7 +20,7 @@ export const Time: FC = () => {
       <Title variant={Variant.l}>Такс такс такс</Title>
       <Flex justify={FlexValue.between}>
         <div>
-          <Text size={FontSize.s} padding={theme.sizes.xs}>
+          <Text size={FontSize.s} paddingBottom={theme.sizes.xs}>
             На часах у нас
           </Text>
           <Flex>
@@ -28,7 +28,7 @@ export const Time: FC = () => {
           </Flex>
         </div>
         <div>
-          <Text size={FontSize.s} padding={theme.sizes.xs}>
+          <Text size={FontSize.s} paddingBottom={theme.sizes.xs}>
             А сегодня у нас
           </Text>
           <Flex>

@@ -1,13 +1,30 @@
 import React, { FC } from "react";
+
 import plus from "../../../assets/plus-square.svg";
-import { Flex, Padding, PaddingSizes, theme } from "../../../styles";
-import { StyledText } from "../NavMenuItem/style";
+
+import {
+  Colors,
+  Cursor,
+  Flex,
+  FontSize,
+  Padding,
+  PaddingSizes,
+  Text,
+  theme,
+} from "../../../styles";
 
 export const ButtonTransparent: FC = () => (
   <Padding top={PaddingSizes.m}>
     <Flex>
       <img src={plus} alt="plus" />
-      <StyledText color={theme.colors.primary}>Добавить</StyledText>
+      <Text
+        color={Colors.primary}
+        size={FontSize.l}
+        paddingLeft={theme.fontSize.m}
+        cursor={Cursor.pointer}
+      >
+        Добавить
+      </Text>
     </Flex>
   </Padding>
 );

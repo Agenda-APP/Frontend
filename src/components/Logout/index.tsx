@@ -1,13 +1,14 @@
 import React, { FC } from "react";
 
-import { Flex } from "../../styles/flex";
-import { StyledText } from "../UI/NavMenuItem/style";
+import { Flex, FontSize, Text, theme, Cursor } from "../../styles";
 
 import logout from "../../assets/logout.svg";
 
 export const Logout: FC = () => (
   <Flex>
     <img src={logout} alt="logout" />
-    <StyledText>Выйти</StyledText>
+    <Text size={FontSize.l} paddingLeft={theme.sizes.s} cursor={Cursor.pointer}>
+      Выйти
+    </Text>
   </Flex>
 );

@@ -1,5 +1,8 @@
 import React, { FC } from "react";
-import { StyledText, LinkElem, MenuItemStyle } from "./style";
+
+import { LinkElem, MenuItemStyle } from "./style";
+import { Cursor, FontSize, Text, theme } from "../../../styles";
+
 import { IMenuItem } from "../../Navigation/MenuContainer/types";
 
 export const NavMenuItem: FC<IMenuItem> = (menuItem) => {
@@ -8,7 +11,13 @@ export const NavMenuItem: FC<IMenuItem> = (menuItem) => {
     <LinkElem to={link}>
       <MenuItemStyle>
         <img src={icon} alt={name} />
-        <StyledText>{name}</StyledText>
+        <Text
+          size={FontSize.l}
+          paddingLeft={theme.sizes.s}
+          cursor={Cursor.pointer}
+        >
+          {name}
+        </Text>
       </MenuItemStyle>
     </LinkElem>
   );

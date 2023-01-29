@@ -1,22 +1,24 @@
 import React, { FC } from "react";
 
 import {
-  Navigation,
-  Tasks,
-  Successes,
-  Time,
-  Observation,
-  Fact,
   Chart,
+  Fact,
+  Navigation,
+  Observation,
+  Successes,
+  Tasks,
+  Time,
+  Header,
 } from "../../components";
 
 import { MainWrapperStyle } from "./style";
-import { Flex, FlexValue } from "../../styles";
+import { Flex, FlexValue, Padding, PaddingSizes } from "../../styles";
 
 export const Screen: FC = () => (
   <MainWrapperStyle>
     <Navigation />
-    <div>
+    <Padding top={PaddingSizes.xs}>
+      <Header />
       <Flex align={FlexValue.stretch} justify={FlexValue.between}>
         <div>
           <Successes />
@@ -29,6 +31,6 @@ export const Screen: FC = () => (
           <Chart />
         </div>
       </Flex>
-    </div>
+    </Padding>
   </MainWrapperStyle>
 );

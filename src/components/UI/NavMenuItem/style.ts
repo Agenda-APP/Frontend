@@ -14,7 +14,7 @@ export const LinkElem = styled(NavLink)`
     border-radius: 20px 0 0 20px;
     height: 25px;
     left: 170px;
-    top: 25px;
+    top: 20px;
     background: ${theme.colors.primary};
   }
 `;
@@ -22,16 +22,4 @@ export const MenuItemStyle = styled.li`
   padding-top: ${theme.sizes.m};
   display: flex;
   align-items: center;
-`;
-
-export const StyledText = styled.span`
-  color: ${(props) => props.color || theme.colors.secondary};
-  margin-left: ${theme.sizes.s};
-  font-weight: ${theme.fontWeight.s};
-  font-size: ${theme.fontSize.l};
-  transition: ${theme.animation.main};
-  cursor: pointer;
-  &:hover {
-    opacity: 0.8;
-  }
 `;

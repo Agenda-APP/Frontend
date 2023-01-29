@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { Width } from "./index";
 
 interface ISectionStyle {
