@@ -6,7 +6,7 @@ import { Section, Title } from "../../index";
 
 import { Width } from "../../UI/Section";
 import { Variant } from "../../UI/Title";
-import { outputByTasks } from "./fakeData";
+import { outputByTasks } from "./mock";
 
 export const Observation: FC = () => {
   const renderOutputByTasks = outputByTasks.map(({ body, id }) => (

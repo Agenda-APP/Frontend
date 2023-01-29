@@ -3,11 +3,11 @@ import React, { FC } from "react";
 import { Flex } from "../../styles/flex";
 import { StyledText } from "../UI/NavMenuItem/style";
 
-import logOut from "../../assets/log-in.svg";
+import logout from "../../assets/logout.svg";
 
 export const Logout: FC = () => (
   <Flex>
-    <img src={logOut} alt="logout" />
+    <img src={logout} alt="logout" />
     <StyledText>Выйти</StyledText>
   </Flex>
 );

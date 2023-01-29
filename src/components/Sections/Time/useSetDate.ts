@@ -31,5 +31,5 @@ export const useSetDate = () => {
     };
   }, [date]);
 
-  return { date };
+  return date;
 };

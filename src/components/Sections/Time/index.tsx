@@ -13,8 +13,8 @@ import { useSetTime } from "./useSetTime";
 import { useSetDate } from "./useSetDate";
 
 export const Time: FC = () => {
-  const { dateTime } = useSetTime();
-  const { date } = useSetDate();
+  const dateTime = useSetTime();
+  const date = useSetDate();
   return (
     <Section width={Width.small}>
       <Title variant={Variant.l}>Такс такс такс</Title>

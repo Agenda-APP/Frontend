@@ -10,5 +10,5 @@ export const useSetTime = () => {
       clearInterval(interval);
     };
   }, [dateTime]);
-  return { dateTime };
+  return dateTime;
 };

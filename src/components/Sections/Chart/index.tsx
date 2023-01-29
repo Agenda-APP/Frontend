@@ -5,13 +5,14 @@ import { dataChart } from "./dataChart";
 
 import { Width } from "../../UI/Section";
 
-import { Title, Section } from "../../../components";
+import { Section, Title } from "../../../components";
 import { theme } from "../../../styles";
+import { Variant } from "../../UI/Title";
 
 export const Chart: FC = () => {
   return (
     <Section width={Width.small}>
-      <Title>График успеваемости</Title>
+      <Title variant={Variant.l}>График успеваемости</Title>
       <LineChart width={420} height={200} data={dataChart}>
         <CartesianGrid stroke="#f5f5f5" />
         <Line
