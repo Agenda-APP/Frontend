@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 import { List } from "../models/tasks.interface";
-import { tasksData } from "../Date/tasksData";
+import { tasksData } from "../components/Sections/Tasks/tasksData";
 
 type TodosState = {
   tasks: List[];

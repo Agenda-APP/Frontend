@@ -6,5 +6,18 @@ import trendingUp from "./iconForMenu/trending-up.svg";
 import staticIcon from "./iconForMenu/bar-chart.svg";
 import edit from "./edit.svg";
 import trash from "./trash.svg";
+import { ReactComponent as Calendar } from "./time/calendar.svg";
+import { ReactComponent as Clock } from "./time/clock.svg";
 
-export { home, briefcase, zap, users, trendingUp, staticIcon, edit, trash };
+export {
+  home,
+  briefcase,
+  zap,
+  users,
+  trendingUp,
+  staticIcon,
+  edit,
+  trash,
+  Calendar,
+  Clock,
+};

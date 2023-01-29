@@ -3,20 +3,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./styles/global";
 
-import { MainWrapper } from "./components";
+import { Screen } from "./components";
 
 const App: FC = () => {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainWrapper />} />
-          <Route path="/home" element={<MainWrapper />} />
-          <Route path="/sport" element={<MainWrapper />} />
-          <Route path="/work" element={<MainWrapper />} />
-          <Route path="/family" element={<MainWrapper />} />
-          <Route path="/statistics" element={<MainWrapper />} />
-          <Route path="/compare" element={<MainWrapper />} />
+          <Route path="/" element={<Screen />} />
+          <Route path="/home" element={<Screen />} />
+          <Route path="/sport" element={<Screen />} />
+          <Route path="/work" element={<Screen />} />
+          <Route path="/family" element={<Screen />} />
+          <Route path="/statistics" element={<Screen />} />
+          <Route path="/compare" element={<Screen />} />
         </Routes>
       </BrowserRouter>
     </div>

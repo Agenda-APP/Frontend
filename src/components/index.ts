@@ -6,14 +6,20 @@ import { MenuSection } from "./Navigation/MenuContainer/MenuSection";
 import { ButtonTransparent } from "./UI/ButtonTransparent";
 import { NavMenuItem } from "./UI/NavMenuItem";
 import { Title } from "./UI/Title";
-import { MainWrapper } from "./MainWrapper";
+import { Screen } from "./Screen";
 import { Section } from "./UI/Section";
-import { Tasks } from "../components/Tasks";
-import { ActiveTasks } from "../components/Tasks/ActiveTasks";
-import { CompletedTasks } from "../components/Tasks/CompletedTasks";
+import { Tasks } from "./Sections/Tasks";
+import { ActiveTasks } from "./Sections/Tasks/ActiveTasks";
+import { CompletedTasks } from "./Sections/Tasks/CompletedTasks";
 import { CheckBox } from "./UI/CheckBox/index";
 import { Input } from "./UI/Input/index";
-import { EmptyTasks } from "../components/Tasks/EmptyTasks";
+import { EmptyTasks } from "./Sections/Tasks/EmptyTasks";
+import { Successes } from "./Sections/Successes";
+import { Time } from "./Sections/Time";
+import { Observation } from "./Sections/Observation";
+import { Fact } from "./Sections/Fact";
+import { Chart } from "./Sections/Chart";
+import { TaskCount } from "./Sections/Successes/TaskCount";
 
 export {
   Logo,
@@ -24,7 +30,7 @@ export {
   ButtonTransparent,
   NavMenuItem,
   Title,
-  MainWrapper,
+  Screen,
   Section,
   Tasks,
   ActiveTasks,
@@ -32,4 +38,10 @@ export {
   CheckBox,
   Input,
   EmptyTasks,
+  Successes,
+  Time,
+  Observation,
+  Fact,
+  Chart,
+  TaskCount,
 };
