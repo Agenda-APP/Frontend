@@ -10,6 +10,7 @@ export const MenuButton = styled.div(
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      background: ${theme.colors.bg};
       margin-left: ${theme.sizes.xs};
       border-radius: ${theme.borders.s};
       transition: ${theme.animation.main};

@@ -17,6 +17,7 @@ import {
   removeTask,
   toggleComplete,
 } from "../../../store/tasksSlice";
+import { ImageSVG } from "../../UI/SVG";
 
 interface ListItemProps {
   task: List;
@@ -40,11 +41,7 @@ export const ActiveTasks: FC<ListItemProps> = ({ task }) => {
           placeholder="Напишите задачу"
         />
         <Flex>
-          <img
-            onClick={() => dispatch(toggleDisabled(id))}
-            src={edit}
-            alt="edit"
-          />
+          <ImageSVG onClick={() => dispatch(toggleDisabled(id))} src={edit} />
           <img
             onClick={() => dispatch(removeTask(id))}
             src={trash}

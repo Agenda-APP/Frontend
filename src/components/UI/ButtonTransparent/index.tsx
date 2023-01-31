@@ -10,7 +10,7 @@ import {
   Padding,
   PaddingSizes,
   Text,
-  theme,
+  PaddingValue,
 } from "../../../styles";
 
 export const ButtonTransparent: FC = () => (
@@ -20,7 +20,7 @@ export const ButtonTransparent: FC = () => (
       <Text
         color={Colors.primary}
         size={FontSize.l}
-        paddingLeft={theme.fontSize.m}
+        paddingLeft={PaddingValue.m}
         cursor={Cursor.pointer}
       >
         Добавить

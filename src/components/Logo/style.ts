@@ -4,6 +4,6 @@ export const LogoName = styled.p(({ theme }) => ({
   fontWeight: theme.fontWeight.m,
   fontSize: theme.fontSize.l,
   color: theme.colors.primary,
-  paddingLeft: 7,
+  paddingLeft: theme.sizes.xs,
   width: "70px",
 }));

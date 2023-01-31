@@ -4,11 +4,10 @@ import { Section, Title } from "../../index";
 import { Width } from "../../UI/Section";
 import { Variant } from "../../UI/Title";
 
-import { TimeText } from "./style";
-import { Flex, FlexValue, FontSize, Text, theme } from "../../../styles";
+import { StyledSVG, TimeText } from "./style";
+import { Flex, FlexValue, FontSize, Text, PaddingValue } from "../../../styles";
 
-import { Calendar, Clock } from "../../../assets";
-
+import { clock, calendar } from "../../../assets";
 import { useSetTime } from "./useSetTime";
 import { useSetDate } from "./useSetDate";
 
@@ -20,19 +19,19 @@ export const Time: FC = () => {
       <Title variant={Variant.l}>Такс такс такс</Title>
       <Flex justify={FlexValue.between}>
         <div>
-          <Text size={FontSize.s} paddingBottom={theme.sizes.xs}>
+          <Text size={FontSize.s} paddingBottom={PaddingValue.xs}>
             На часах у нас
           </Text>
           <Flex>
-            <Calendar /> <TimeText>{dateTime}</TimeText>
+            <StyledSVG src={clock} /> <TimeText>{dateTime}</TimeText>
           </Flex>
         </div>
         <div>
-          <Text size={FontSize.s} paddingBottom={theme.sizes.xs}>
+          <Text size={FontSize.s} paddingBottom={PaddingValue.xs}>
             А сегодня у нас
           </Text>
           <Flex>
-            <Clock />
+            <StyledSVG src={calendar} />
             <TimeText>{date}</TimeText>
           </Flex>
         </div>

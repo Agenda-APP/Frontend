@@ -4,8 +4,8 @@ import {
   FlexValue,
   FontSize,
   Text,
-  theme,
   WeightText,
+  PaddingValue,
 } from "../../../styles";
 
 import { currentUser } from "./mock";
@@ -18,7 +18,7 @@ export const UserHeader: FC = () => {
       <Text
         size={FontSize.m}
         weight={WeightText.m}
-        paddingRight={theme.sizes.xs}
+        paddingRight={PaddingValue.xs}
       >
         Хорошего дня, {currentUser.userName}
       </Text>

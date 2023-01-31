@@ -7,7 +7,7 @@ export enum Cursor {
 
 export enum Colors {
   primary = "primary",
-  dark = "dark",
+  text = "text",
 }
 
 export enum WeightText {
@@ -20,12 +20,20 @@ export enum FontSize {
   m = "m",
   l = "l",
 }
+
+export enum PaddingValue {
+  xs = "xs",
+  s = "s",
+  m = "m",
+  l = "l",
+  none = "none",
+}
 export interface IText {
   weight?: WeightText;
   size?: FontSize;
-  paddingBottom?: string;
-  paddingRight?: string;
-  paddingLeft?: string;
+  paddingBottom?: PaddingValue;
+  paddingRight?: PaddingValue;
+  paddingLeft?: PaddingValue;
   color?: Colors;
   cursor?: Cursor;
 }
@@ -35,18 +43,18 @@ export const Text = styled.p<IText>(
     theme,
     weight = WeightText.s,
     size = FontSize.xs,
-    paddingBottom = "0",
-    paddingRight = "0",
-    paddingLeft = "0",
-    color = Colors.dark,
+    paddingBottom = PaddingValue.none,
+    paddingRight = PaddingValue.none,
+    paddingLeft = PaddingValue.none,
+    color = Colors.text,
     cursor = Cursor.auto,
   }) => ({
     fontWeight: theme.fontWeight[weight],
     fontSize: theme.fontSize[size],
     color: theme.colors[color],
-    paddingBottom: paddingBottom,
-    paddingRight: paddingRight,
-    paddingLeft: paddingLeft,
+    paddingBottom: theme.sizes[paddingBottom],
+    paddingRight: theme.sizes[paddingRight],
+    paddingLeft: theme.sizes[paddingLeft],
     cursor: cursor,
   })
 );

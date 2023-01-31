@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
-import { LinkElem, MenuItemStyle } from "./style";
-import { Cursor, FontSize, Text, theme } from "../../../styles";
+import { LinkElem, MenuItemStyle, StyledSVG } from "./style";
+import { Cursor, FontSize, Text, PaddingValue } from "../../../styles";
 
 import { IMenuItem } from "../../Navigation/MenuContainer/types";
 
@@ -10,10 +10,10 @@ export const NavMenuItem: FC<IMenuItem> = (menuItem) => {
   return (
     <LinkElem to={link}>
       <MenuItemStyle>
-        <img src={icon} alt={name} />
+        <StyledSVG src={icon} />
         <Text
           size={FontSize.l}
-          paddingLeft={theme.sizes.s}
+          paddingLeft={PaddingValue.s}
           cursor={Cursor.pointer}
         >
           {name}
