@@ -1,18 +1,19 @@
-export const newTheme = (themeType: boolean) => {
+export const newTheme = (themeType: string) => {
   const theme = {
     colors: {
       primary: "#29A19C",
-      bgBody: themeType ? "#222831" : "#F9F9F9",
+      bgBody: themeType === "dark" ? "#222831" : "#F9F9F9",
       warning: "#F05454",
-      text: themeType ? "#F9F9F9" : "#2C3440",
-      bg: themeType ? "#2C3440" : "#FFFFFF",
+      text: themeType === "dark" ? "#F9F9F9" : "#2C3440",
+      bg: themeType === "dark" ? "#2C3440" : "#FFFFFF",
     },
     borders: {
       s: "5px",
       m: "15px",
-      borderTasks: themeType
-        ? "1px solid rgba(249, 249, 249, 0.2)"
-        : "1px solid rgba(40, 40, 70, 0.1)",
+      borderTasks:
+        themeType === "dark"
+          ? "1px solid rgba(249, 249, 249, 0.2)"
+          : "1px solid rgba(40, 40, 70, 0.1)",
     },
     fontWeight: {
       s: 400,

@@ -11,9 +11,8 @@ import { useAppSelector } from "./hooks/redux";
 
 const App: FC = () => {
   const { theme } = useAppSelector((state) => state.themeToggle);
-  const isDarkTheme = theme === "dark";
   return (
-    <ThemeProvider theme={newTheme(isDarkTheme)}>
+    <ThemeProvider theme={newTheme(theme)}>
       <Global />
       <div>
         <BrowserRouter>
