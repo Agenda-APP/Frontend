@@ -5,6 +5,7 @@ export enum Variant {
   transparent = "transparent",
   primary = "primary",
   warning = "warning",
+  white = "white",
 }
 
 interface ButtonProps {
@@ -13,6 +14,8 @@ interface ButtonProps {
   variant?: Variant;
   icon?: string;
   children?: ReactNode;
+  borders?: Variant;
+  textColor?: Variant;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -20,9 +23,17 @@ export const Button: FC<ButtonProps> = ({
   type = "button",
   children,
   variant = Variant.primary,
+  borders = Variant.primary,
+  textColor = Variant.white,
 }) => {
   return (
-    <ButtonStyled onClick={onClick} type={type} variant={variant}>
+    <ButtonStyled
+      onClick={onClick}
+      type={type}
+      variant={variant}
+      borders={borders}
+      textColor={textColor}
+    >
       {children}
     </ButtonStyled>
   );

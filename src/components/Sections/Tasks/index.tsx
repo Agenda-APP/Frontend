@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Variant } from "../../UI/Title";
+import { VariantSize } from "../../UI/Title";
 import {
   ActiveTasks,
   CompletedTasks,
@@ -25,12 +25,12 @@ export const Tasks: FC = () => {
 
   return (
     <Section>
-      <Title variant={Variant.l}>Активные задачи</Title>
+      <Title variant={VariantSize.l}>Активные задачи</Title>
       <ul>
         {renderActiveTasks}
         <EmptyTasks tasks={tasks} title={Empty.active} />
       </ul>
-      <Title variant={Variant.l}>Завершенные задачи</Title>
+      <Title variant={VariantSize.l}>Завершенные задачи</Title>
       <ul>
         {renderFilterTasks}
         <EmptyTasks tasks={filterTasks} title={Empty.completed} />

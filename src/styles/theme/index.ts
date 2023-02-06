@@ -6,9 +6,12 @@ export const newTheme = (themeType: string) => {
       warning: "#F05454",
       text: themeType === "dark" ? "#F9F9F9" : "#2C3440",
       bg: themeType === "dark" ? "#2C3440" : "#FFFFFF",
+      grey: "rgba(109,108,108,0.38)",
+      dark: "#222831",
+      white: "#FFFFFF",
     },
     borders: {
-      s: "5px",
+      s: "10px",
       m: "15px",
       borderTasks:
         themeType === "dark"
@@ -43,6 +46,10 @@ export const newTheme = (themeType: string) => {
     },
     animation: {
       main: "all 300ms ease",
+    },
+    sizeModal: {
+      width: "700px",
+      height: "400px",
     },
   };
   return theme;

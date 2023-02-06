@@ -21,6 +21,7 @@ export const InputStyle = styled.input<InputStyleProps>(
       width: 100%;
       background: ${theme.colors.bg};
       border: 2px solid ${theme.colors.text};
+      border-radius: 10px;
     }
   `
 );

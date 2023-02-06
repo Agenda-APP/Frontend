@@ -7,11 +7,12 @@ export enum LineThrough {
 }
 
 interface ITaskWrapper {
-  nameTask: string;
+  nameTask?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-  disabled: boolean;
+  disabled?: boolean;
   lineThrough?: LineThrough;
-  placeholder: string;
+  placeholder?: string;
+  type?: string;
 }
 
 export const Input: FC<ITaskWrapper> = ({
@@ -20,6 +21,7 @@ export const Input: FC<ITaskWrapper> = ({
   disabled,
   lineThrough = LineThrough.none,
   placeholder,
+  type = "text",
 }) => {
   return (
     <InputStyle
@@ -28,6 +30,7 @@ export const Input: FC<ITaskWrapper> = ({
       placeholder={placeholder}
       disabled={disabled}
       lineThrough={lineThrough}
+      type={type}
     />
   );
 };

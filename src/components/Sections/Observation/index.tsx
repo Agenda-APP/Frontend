@@ -5,7 +5,7 @@ import { FontSize, Text, PaddingValue } from "../../../styles";
 import { Section, Title } from "../../index";
 
 import { Width } from "../../UI/Section";
-import { Variant } from "../../UI/Title";
+import { VariantSize } from "../../UI/Title";
 import { outputByTasks } from "./mock";
 
 export const Observation: FC = () => {
@@ -16,7 +16,7 @@ export const Observation: FC = () => {
   ));
   return (
     <Section width={Width.small}>
-      <Title variant={Variant.l}>Наблюдение</Title>
+      <Title variant={VariantSize.l}>Наблюдение</Title>
       {renderOutputByTasks}
     </Section>
   );

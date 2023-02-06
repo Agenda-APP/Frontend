@@ -26,6 +26,8 @@ import { UserMenuButton } from "./Header/UserMenuButton";
 import { ImageTheme } from "./Header/ImageTheme";
 import { Button } from "./UI/Button/Button";
 import { Avatar } from "./UI/Avatar";
+import { InputForm } from "./Modal/Form/InputForm";
+import { Select } from "./Modal/Form/Select";
 
 export {
   Logo,
@@ -56,4 +58,6 @@ export {
   ImageTheme,
   Button,
   Avatar,
+  InputForm,
+  Select,
 };

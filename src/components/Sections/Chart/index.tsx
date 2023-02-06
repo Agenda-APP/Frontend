@@ -7,7 +7,7 @@ import { Width } from "../../UI/Section";
 
 import { Section, Title } from "../../../components";
 
-import { Variant } from "../../UI/Title";
+import { VariantSize } from "../../UI/Title";
 import { newTheme } from "../../../styles/theme";
 import { useAppSelector } from "../../../hooks/redux";
 
@@ -16,7 +16,7 @@ export const Chart: FC = () => {
 
   return (
     <Section width={Width.small}>
-      <Title variant={Variant.l}>График успеваемости</Title>
+      <Title variant={VariantSize.l}>График успеваемости</Title>
       <LineChart width={420} height={200} data={dataChart}>
         <CartesianGrid stroke="#f5f5f5" />
         <Line

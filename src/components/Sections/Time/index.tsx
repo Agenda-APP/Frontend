@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Section, Title } from "../../index";
 
 import { Width } from "../../UI/Section";
-import { Variant } from "../../UI/Title";
+import { VariantSize } from "../../UI/Title";
 
 import { StyledSVG, TimeText } from "./style";
 import { Flex, FlexValue, FontSize, Text, PaddingValue } from "../../../styles";
@@ -16,7 +16,7 @@ export const Time: FC = () => {
   const date = useSetDate();
   return (
     <Section width={Width.small}>
-      <Title variant={Variant.l}>Такс такс такс</Title>
+      <Title variant={VariantSize.l}>Такс такс такс</Title>
       <Flex justify={FlexValue.between}>
         <div>
           <Text size={FontSize.s} paddingBottom={PaddingValue.xs}>

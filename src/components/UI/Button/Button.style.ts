@@ -3,19 +3,20 @@ import { Variant } from "./Button";
 
 interface ButtonStyledProps {
   variant: Variant;
+  borders: Variant;
+  textColor: Variant;
 }
 
 export const ButtonStyled = styled.button<ButtonStyledProps>(
-  ({ variant, theme }) => ({
-    width: 186,
-    height: 42,
+  ({ variant, theme, borders, textColor }) => ({
+    minWidth: 186,
     background: theme.colors[variant],
     borderRadius: theme.borders.m,
-    padding: `0 ${theme.sizes.l}`,
+    padding: `${theme.sizes.xs} ${theme.sizes.l}`,
     outline: "inherit",
-    border: 0,
+    border: `2px solid ${theme.colors[borders]}`,
     cursor: "pointer",
-    color: "white",
+    color: theme.colors[textColor],
     fontWeight: theme.fontWeight.m,
     fontSize: theme.fontSize.m,
     transition: theme.animation.main,

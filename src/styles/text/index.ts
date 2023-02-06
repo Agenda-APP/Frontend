@@ -8,6 +8,8 @@ export enum Cursor {
 export enum Colors {
   primary = "primary",
   text = "text",
+  dark = "dark",
+  warning = "warning",
 }
 
 export enum WeightText {
