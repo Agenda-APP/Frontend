@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Variant } from "./index";
+import { VariantSize } from "./index";
 
 interface TitleStyledProps {
-  variant: Variant;
+  variant: VariantSize;
 }
 
 export const TitleStyle = styled.h2<TitleStyledProps>(({ theme, variant }) => ({

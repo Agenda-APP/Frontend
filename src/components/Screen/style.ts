@@ -1,9 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const MainWrapperStyle = styled.div(
-  ({ theme }) => css`
-    display: grid;
-    grid-template-columns: ${theme.width.navigation} ${theme.width.main};
-    gap: 70px;
-  `
-);
+export const MainWrapperStyle = styled.div(({ theme }) => ({
+  display: "grid",
+  gridTemplateColumns: `${theme.width.navigation} ${theme.width.main}`,
+  gap: "70px",
+  background: theme.colors.bgBody,
+}));

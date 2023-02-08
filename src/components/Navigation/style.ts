@@ -7,6 +7,6 @@ export const NavigationStyle = styled.div(({ theme }) => ({
   gridTemplateRows: "auto 1fr auto",
   boxShadow: theme.boxShadow.global,
   overflow: "inherit",
-  background: "white",
+  background: theme.colors.bg,
   padding: theme.sizes.m,
 }));

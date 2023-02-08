@@ -1,27 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 
 export const Global = createGlobalStyle`
-    *  
-    {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Nunito';
+      font-family: "Nunito";
     }
-    button
-    {
+    button {
       cursor: pointer;
       border: none;
       background: transparent;
     }
-    a
-    {
+    a {
       text-decoration: none;
       color: inherit;
     }
-    ul, li
-    {
+    ul,
+    li {
       list-style: none;
       padding: 0;
     }
-    `;
+  `;

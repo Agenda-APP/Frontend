@@ -20,6 +20,14 @@ import { Observation } from "./Sections/Observation";
 import { Fact } from "./Sections/Fact";
 import { Chart } from "./Sections/Chart";
 import { TaskCount } from "./Sections/Successes/TaskCount";
+import { Header } from "./Header";
+import { UserHeader } from "./Header/UserHeader";
+import { UserMenuButton } from "./Header/UserMenuButton";
+import { ImageTheme } from "./Header/ImageTheme";
+import { Button } from "./UI/Button/Button";
+import { Avatar } from "./UI/Avatar";
+import { InputForm } from "./Modal/Form/InputForm";
+import { Select } from "./Modal/Form/Select";
 
 export {
   Logo,
@@ -44,4 +52,12 @@ export {
   Fact,
   Chart,
   TaskCount,
+  Header,
+  UserHeader,
+  UserMenuButton,
+  ImageTheme,
+  Button,
+  Avatar,
+  InputForm,
+  Select,
 };

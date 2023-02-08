@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { Width } from "./index";
 
 interface ISectionStyle {
@@ -10,7 +11,7 @@ export const SectionStyle = styled.section<ISectionStyle>(
     width: width,
     padding: theme.sizes.m,
     boxShadow: theme.boxShadow.global,
-    background: "white",
+    background: theme.colors.bg,
     borderRadius: theme.sizes.s,
     marginBottom: theme.sizes.m,
     marginTop: theme.sizes.m,

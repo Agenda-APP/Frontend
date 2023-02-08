@@ -1,34 +1,42 @@
 import React, { FC } from "react";
 
 import {
-  Navigation,
-  Tasks,
-  Successes,
-  Time,
-  Observation,
-  Fact,
   Chart,
+  Fact,
+  Navigation,
+  Observation,
+  Successes,
+  Tasks,
+  Time,
+  Header,
 } from "../../components";
 
 import { MainWrapperStyle } from "./style";
-import { Flex, FlexValue } from "../../styles";
+import { Flex, FlexValue, Padding, PaddingSizes } from "../../styles";
+import { Modal } from "../Modal";
+import { useAppSelector } from "../../hooks/redux";
 
-export const Screen: FC = () => (
-  <MainWrapperStyle>
-    <Navigation />
-    <div>
-      <Flex align={FlexValue.stretch} justify={FlexValue.between}>
-        <div>
-          <Successes />
-          <Tasks />
-        </div>
-        <div>
-          <Time />
-          <Observation />
-          <Fact />
-          <Chart />
-        </div>
-      </Flex>
-    </div>
-  </MainWrapperStyle>
-);
+export const Screen: FC = () => {
+  const { isModal } = useAppSelector((state) => state.toggleModal);
+  return (
+    <MainWrapperStyle>
+      <Navigation />
+      <Padding top={PaddingSizes.xs}>
+        <Header />
+        <Flex align={FlexValue.stretch} justify={FlexValue.between}>
+          <div>
+            <Successes />
+            <Tasks />
+          </div>
+          <div>
+            <Time />
+            <Observation />
+            <Fact />
+            <Chart />
+          </div>
+        </Flex>
+      </Padding>
+      {isModal && <Modal />}
+    </MainWrapperStyle>
+  );
+};
