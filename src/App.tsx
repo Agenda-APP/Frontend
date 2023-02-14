@@ -3,16 +3,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./styles/global";
 
-import { Screen } from "./components";
+import { Screen, Auth } from "./components";
 import { ThemeProvider } from "styled-components";
-import { newTheme } from "./styles/theme";
+import { Theme } from "./styles/theme";
 import { Global } from "./styles";
 import { useAppSelector } from "./hooks/redux";
 
 const App: FC = () => {
   const { theme } = useAppSelector((state) => state.themeToggle);
   return (
-    <ThemeProvider theme={newTheme(theme)}>
+    <ThemeProvider theme={Theme(theme)}>
       <Global />
       <div>
         <BrowserRouter>
@@ -24,6 +24,7 @@ const App: FC = () => {
             <Route path="/family" element={<Screen />} />
             <Route path="/statistics" element={<Screen />} />
             <Route path="/compare" element={<Screen />} />
+            <Route path="/login" element={<Auth />} />
           </Routes>
         </BrowserRouter>
       </div>

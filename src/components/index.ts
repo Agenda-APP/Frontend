@@ -11,8 +11,8 @@ import { Section } from "./UI/Section";
 import { Tasks } from "./Sections/Tasks";
 import { ActiveTasks } from "./Sections/Tasks/ActiveTasks";
 import { CompletedTasks } from "./Sections/Tasks/CompletedTasks";
-import { CheckBox } from "./UI/CheckBox/index";
-import { Input } from "./UI/Input/index";
+import { CheckBox } from "./UI/CheckBox";
+import { Input } from "./UI/Input";
 import { EmptyTasks } from "./Sections/Tasks/EmptyTasks";
 import { Successes } from "./Sections/Successes";
 import { Time } from "./Sections/Time";
@@ -28,6 +28,10 @@ import { Button } from "./UI/Button/Button";
 import { Avatar } from "./UI/Avatar";
 import { InputForm } from "./Modal/Form/InputForm";
 import { Select } from "./Modal/Form/Select";
+import { Auth } from "./Auth";
+import { SignUp } from "./Auth/FormAuth/SignUp";
+import { SignIn } from "./Auth/FormAuth/SignIn";
+import { CopyRight } from "./Auth/CopyRight";
 
 export {
   Logo,
@@ -60,4 +64,8 @@ export {
   Avatar,
   InputForm,
   Select,
+  Auth,
+  SignUp,
+  SignIn,
+  CopyRight,
 };

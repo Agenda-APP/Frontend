@@ -15,5 +15,6 @@ export const SectionStyle = styled.section<ISectionStyle>(
     borderRadius: theme.sizes.s,
     marginBottom: theme.sizes.m,
     marginTop: theme.sizes.m,
+    alignSelf: "center",
   })
 );

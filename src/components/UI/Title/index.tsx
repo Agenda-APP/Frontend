@@ -6,11 +6,25 @@ export enum VariantSize {
   xl = "xl",
 }
 
+export enum AlignTitle {
+  center = "center",
+  default = "start",
+}
+
 interface ITitle {
   children: string;
   variant?: VariantSize;
+  align?: AlignTitle;
 }
 
-export const Title: FC<ITitle> = ({ children, variant = VariantSize.xl }) => {
-  return <TitleStyle variant={variant}>{children}</TitleStyle>;
+export const Title: FC<ITitle> = ({
+  children,
+  variant = VariantSize.xl,
+  align = AlignTitle.default,
+}) => {
+  return (
+    <TitleStyle variant={variant} align={align}>
+      {children}
+    </TitleStyle>
+  );
 };

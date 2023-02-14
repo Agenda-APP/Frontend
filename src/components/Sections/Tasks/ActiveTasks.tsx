@@ -16,7 +16,7 @@ import {
   toggleDisabled,
   removeTask,
   toggleComplete,
-} from "../../../store/tasksSlice";
+} from "../../../store/tasks/tasksSlice";
 import { ImageSVG } from "../../UI/SVG";
 
 interface ListItemProps {

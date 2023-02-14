@@ -8,7 +8,7 @@ import { Width } from "../../UI/Section";
 import { Section, Title } from "../../../components";
 
 import { VariantSize } from "../../UI/Title";
-import { newTheme } from "../../../styles/theme";
+import { Theme } from "../../../styles/theme";
 import { useAppSelector } from "../../../hooks/redux";
 
 export const Chart: FC = () => {
@@ -22,17 +22,17 @@ export const Chart: FC = () => {
         <Line
           type="monotone"
           dataKey="grow"
-          stroke={newTheme(theme).colors.primary}
+          stroke={Theme(theme).colors.primary}
           yAxisId={0}
         />
         <XAxis
           dataKey="day"
-          style={{ fontSize: newTheme(theme).fontSize.s }}
+          style={{ fontSize: Theme(theme).fontSize.s }}
           tickLine={false}
           axisLine={false}
         />
         <YAxis
-          style={{ fontSize: newTheme(theme).fontSize.s }}
+          style={{ fontSize: Theme(theme).fontSize.s }}
           axisLine={false}
           tickLine={false}
           width={20}

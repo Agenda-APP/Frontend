@@ -1,6 +1,6 @@
 import { Padding, PaddingSizes } from "./padding";
 import { Flex, FlexValue } from "./flex";
-import { Global } from "../styles/global";
+import { Global } from "./global";
 import {
   Text,
   FontSize,
@@ -8,7 +8,8 @@ import {
   Colors,
   Cursor,
   PaddingValue,
-} from "../styles/text";
+  AlignText,
+} from "./text";
 
 export {
   Padding,
@@ -22,4 +23,5 @@ export {
   Colors,
   Cursor,
   PaddingValue,
+  AlignText,
 };

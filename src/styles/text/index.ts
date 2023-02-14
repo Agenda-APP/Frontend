@@ -22,7 +22,10 @@ export enum FontSize {
   m = "m",
   l = "l",
 }
-
+export enum AlignText {
+  default = "start",
+  center = "center",
+}
 export enum PaddingValue {
   xs = "xs",
   s = "s",
@@ -36,8 +39,11 @@ export interface IText {
   paddingBottom?: PaddingValue;
   paddingRight?: PaddingValue;
   paddingLeft?: PaddingValue;
+  paddingTop?: PaddingValue;
+  padding?: PaddingValue;
   color?: Colors;
   cursor?: Cursor;
+  align?: AlignText;
 }
 
 export const Text = styled.p<IText>(
@@ -48,8 +54,10 @@ export const Text = styled.p<IText>(
     paddingBottom = PaddingValue.none,
     paddingRight = PaddingValue.none,
     paddingLeft = PaddingValue.none,
+    paddingTop = PaddingValue.none,
     color = Colors.text,
     cursor = Cursor.auto,
+    align = AlignText.default,
   }) => ({
     fontWeight: theme.fontWeight[weight],
     fontSize: theme.fontSize[size],
@@ -57,6 +65,8 @@ export const Text = styled.p<IText>(
     paddingBottom: theme.sizes[paddingBottom],
     paddingRight: theme.sizes[paddingRight],
     paddingLeft: theme.sizes[paddingLeft],
+    paddingTop: theme.sizes[paddingTop],
     cursor: cursor,
+    textAlign: align,
   })
 );

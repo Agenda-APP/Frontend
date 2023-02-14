@@ -1,4 +1,4 @@
-export const newTheme = (themeType: string) => {
+export const Theme = (themeType: string) => {
   const theme = {
     colors: {
       primary: "#29A19C",
@@ -38,6 +38,7 @@ export const newTheme = (themeType: string) => {
       l: "25px",
     },
     width: {
+      full: "100%",
       navigation: "231px",
       main: "1069px",
     },

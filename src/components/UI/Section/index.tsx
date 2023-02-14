@@ -3,6 +3,7 @@ import React, { FC, ReactNode } from "react";
 import { SectionStyle } from "./style";
 
 export enum Width {
+  form = "350px",
   small = "472px",
   middle = "566px",
 }

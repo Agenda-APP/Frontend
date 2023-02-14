@@ -8,6 +8,8 @@ import edit from "./edit.svg";
 import trash from "./trash.svg";
 import calendar from "./time/calendar.svg";
 import clock from "./time/clock.svg";
+import burger from "./burger.svg";
+import copyRight from "./copyright.svg";
 
 export {
   home,
@@ -20,4 +22,6 @@ export {
   trash,
   calendar,
   clock,
+  burger,
+  copyRight,
 };
